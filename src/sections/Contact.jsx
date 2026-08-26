@@ -23,7 +23,7 @@ export default function Contact() {
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const subject = `[Raut] ${form.topic} inquiry — ${form.name}`
     const body = [
@@ -37,6 +37,34 @@ export default function Contact() {
     window.location.href = `mailto:Hello@raut.com?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`
+
+    try {
+      await submitContactForm(form)
+    } catch (error) {
+  
+    }
+  }
+
+  // Service function for contact form submission
+  const submitContactForm = async (formData) => {
+    try {
+      const response = await fetch('/api/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      return await response.json()
+    } catch (error) {
+      console.error('AJAX submission failed:', error)
+      throw error
+    }
   }
 
   return (
