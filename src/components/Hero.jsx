@@ -74,13 +74,13 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="#contact"
-                className="flex min-h-12 items-center rounded-full bg-gold px-8 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
+                className="relative z-[9999] flex min-h-12 items-center rounded-full bg-gold px-8 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
               >
                 Contact Us
               </a>
               <a
                 href="#intro"
-                className="flex min-h-12 items-center rounded-full border border-paper/40 px-8 text-base font-medium text-paper transition-colors hover:border-paper"
+                className="relative z-[9999] flex min-h-12 items-center rounded-full border border-paper/40 px-8 text-base font-medium text-paper transition-colors hover:border-paper"
               >
                 Learn More
               </a>
