@@ -5,7 +5,7 @@ const TOPICS = ['Real Estate', 'Technology & AI', 'Business Operations', 'Career
 
 // Swap these for the real profile URLs when ready.
 const LINKEDIN = [
-  { label: 'Amit Raut', href: 'https://www.linkedin.com/in/amit-raut' },
+  { label: 'Amit Raut', href: 'https://www.linkedin.com/in/amitraut/' },
   { label: 'Raut Properties', href: 'https://www.linkedin.com/company/raut-properties' },
 ]
 
@@ -34,7 +34,7 @@ export default function Contact() {
       '',
       form.message,
     ].join('\n')
-    window.location.href = `mailto:Hello@raut.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:leasing@raut.com?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`
 
@@ -86,10 +86,10 @@ export default function Contact() {
                 </dt>
                 <dd className="mt-2">
                   <a
-                    href="mailto:Hello@raut.com"
+                    href="mailto:leasing@raut.com"
                     className="font-display text-2xl font-bold text-paper hover:text-blue"
                   >
-                    Hello@raut.com
+                    leasing@raut.com
                   </a>
                 </dd>
               </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                 <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-paper/50">
                   Address
                 </dt>
-                <dd className="mt-2 text-lg text-paper/80">96 Clinton Ave</dd>
+                <dd className="mt-2 text-lg text-paper/80">96 Clinton Ave, Newark, NJ 07114</dd>
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-paper/50">

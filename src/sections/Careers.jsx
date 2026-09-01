@@ -34,7 +34,7 @@ export default function Careers() {
                   </p>
                 </div>
                 <a
-                  href={`mailto:Hello@raut.com?subject=${encodeURIComponent(
+                  href={`mailto:leasing@raut.com?subject=${encodeURIComponent(
                     `Application — ${o.role} (${o.location})`,
                   )}`}
                   className="flex min-h-11 w-fit items-center rounded-full border border-ink px-7 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-paper"
